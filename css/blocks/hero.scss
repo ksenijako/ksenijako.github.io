@@ -1,0 +1,45 @@
+.hero{
+  background: url('../img/bg/hero-bg.jpg') center center / cover no-repeat;
+}
+
+.hero__container{
+  display: flex;
+  flex: .78;
+}
+.hero__content{
+  display: flex;
+  align-items: center;
+}
+
+.hero__text{
+  padding: 64px 0 0 15px;
+}
+
+.hero__title{
+  color: $yellow;
+  font-size: 72px;
+  margin-bottom: 20px;
+  @include gagalin();
+}
+
+.hero__desc{
+  font-size: 65px;
+  color: #fff;
+  @include lifehack();
+  line-height: 1;
+}
+
+.hero__content{
+  display: flex;
+  align-items: center;
+}
+
+.hero-container{
+  flex: 1;
+}
+
+.to-next-section::after{
+  content: "";
+  display: block;
+  background: url('./img/icons/arrow-scroll.svg') center center no-repeat;
+}
