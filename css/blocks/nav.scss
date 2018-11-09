@@ -6,6 +6,22 @@
   display: flex;
 }
 
+.nav__item{
+  display: flex;
+  align-items: center;
+  
+  &:after{
+    content: "";
+    width: 4px;
+    height: 4px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 10px;
+  }
+
+}
+
 .nav__item:last-child .nav__link:after{
   display: none;
 }
@@ -17,14 +33,4 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
-
-  &:after{
-    content: "";
-    width: 4px;
-    height: 4px;
-    display: block;
-    border-radius: 50%;
-    background: #fff;
-    margin: 0 10px;
-  }
 }

@@ -3,11 +3,22 @@
   padding: 10px 15px;
   background: $red;
   color: #fff;
+  @include ubuntu($style: medium);
   text-decoration: none;
   text-transform: uppercase;
-  font-style: 13px;
+  font-size: 13px;
+
+  &:hover{
+    background: #c1401e;
+  }
 }
 
 .btn--bg-black{
-  width: 45%;
+  text-align: center;
+  padding: 12px 15px;
+
+  &:hover{
+    background: #1f2122;
+    cursor: pointer;
+  }
 }
