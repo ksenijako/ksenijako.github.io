@@ -598,6 +598,44 @@ footer {
   font-size: 14.04px;
   line-height: 1.714; }
 
+.pagination {
+  position: fixed;
+  top: 95px;
+  right: 55px; }
+
+.pagination__item {
+  margin-bottom: 5px; }
+
+.pagination__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid transparent;
+  border-radius: 50%; }
+  .pagination__link:hover {
+    border-color: #fff; }
+
+.pagination__link:before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff; }
+
+.pagination__item_active .pagination__link {
+  border-color: #fff; }
+
 .reviews {
   background: #000; }
 
