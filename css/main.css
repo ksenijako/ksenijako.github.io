@@ -434,6 +434,9 @@ footer {
   -ms-flex: .78;
   flex: .78; }
 
+.hero__left, .hero__right {
+  width: 50%; }
+
 .hero__text {
   padding: 64px 0 0 15px; }
 
@@ -540,6 +543,7 @@ footer {
     background: #c1401e; }
 
 .btn--bg-black {
+  background: #2f3234;
   text-align: center;
   padding: 12px 15px;
   max-width: 110px; }
@@ -577,6 +581,7 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 30%;
   padding: 0px 10px; }
 
 .best__img {
@@ -693,5 +698,89 @@ footer {
   margin-bottom: 20px;
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 300; }
+
+.team {
+  background: url("../img/bg/team-bg.jpg") center center/cover no-repeat;
+  position: relative; }
+
+.team__block {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  background: rgba(47, 50, 52, 0.93);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 13%; }
+
+.team__item {
+  color: #fff;
+  font-size: 14.01px; }
+
+.team__member-name {
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer; }
+  .team__member-name:before {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    content: "";
+    width: 10px;
+    height: 7px;
+    background: url("../img/icons/triangle.png") center center no-repeat;
+    margin-right: 10px; }
+
+.team__member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+  height: 0;
+  overflow: hidden; }
+
+.team__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px; }
+  .team__avatar .team__avatar-pic {
+    display: block;
+    max-width: 133%;
+    max-height: 100%; }
+
+.team__desc .team__function {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: bold; }
+
+.team__desc .team__text {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
+  max-width: 208px; }
+
+.team__member-name_active + .team__member {
+  height: 100px;
+  overflow: auto; }
+
+.team__member-name_active {
+  color: #f9b43b; }
+  .team__member-name_active:before {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
 
 /*# sourceMappingURL=main.css.map */
