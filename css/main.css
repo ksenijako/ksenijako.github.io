@@ -457,17 +457,15 @@ footer {
   flex: 1; }
 
 .to-next-section {
+  width: 32px;
+  height: 20px;
+  background: url("../img/icons/arrow-scroll.svg") center center no-repeat;
   position: absolute;
-  left: 50%;
   bottom: 40px;
-  background: transparent;
-  border: none;
-  outline: none;
-  width: 30px;
-  height: 17px; }
-  .to-next-section:after {
-    content: "";
-    background: url("../img/icons/arrow-scroll.svg") center center no-repeat; }
+  left: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%); }
 
 .header {
   display: -webkit-box;

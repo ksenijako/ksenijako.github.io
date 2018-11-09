@@ -29,18 +29,11 @@
 }
 
 .to-next-section{
+  width: 32px;
+  height: 20px;
+  background: url('../img/icons/arrow-scroll.svg') center center no-repeat;
   position: absolute;
-  left: 50%;
   bottom: 40px;
-  background: transparent;
-  border: none; 
-  outline: none;
-  width: 30px;
-  height: 17px;
-
-  &:after{
-    content:"";
-    background: url('../img/icons/arrow-scroll.svg') center center no-repeat;
-  }
-  
+  left: 50%;
+  transform: translate(0, -50%);
 }
