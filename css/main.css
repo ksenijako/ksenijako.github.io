@@ -552,10 +552,10 @@ footer {
   color: #f9b43b;
   font-size: 72px;
   margin-bottom: 20px;
-  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
-  text-align: center; }
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif; }
   .title--color-black {
-    color: black; }
+    color: black;
+    text-align: center; }
 
 .best {
   background: url("../img/bg/best.jpg") center center/cover no-repeat; }

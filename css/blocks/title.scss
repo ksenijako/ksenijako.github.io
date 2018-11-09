@@ -3,9 +3,9 @@
   font-size: 72px;
   margin-bottom: 20px;
   @include gagalin();
-  text-align: center;
 
   &--color-black{
     color: black;
+    text-align: center;
   }
 }
