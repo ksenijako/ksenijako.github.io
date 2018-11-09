@@ -16,9 +16,9 @@
 .btn--bg-black{
   text-align: center;
   padding: 12px 15px;
+  max-width: 110px;
 
   &:hover{
     background: #1f2122;
-    cursor: pointer;
   }
 }
