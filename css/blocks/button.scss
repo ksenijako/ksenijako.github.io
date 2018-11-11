@@ -11,6 +11,16 @@
   &:hover{
     background: #c1401e;
   }
+
+  &_clear{
+    background: transparent;
+    text-transform: none;
+    @include ubuntu($style: light);
+  }
+
+  &_clear:hover{
+    background: transparent;
+  }
 }
 
 .btn--bg-black{

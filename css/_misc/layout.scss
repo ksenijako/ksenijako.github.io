@@ -53,6 +53,22 @@ h6 {
   font-weight: normal;
 }
 
+input, textarea{
+  width: 100%;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+textarea{
+  resize: none;
+  height: 90px;
+}
+
+a{
+  text-decoration: none;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
