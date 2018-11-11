@@ -24,6 +24,12 @@ body {
   &--without-align{
     justify-content: initial;
   }
+
+  &_footer{
+    flex-direction: inherit;
+    justify-content: space-between;
+    align-items: center;
+  }
   
 }
 
