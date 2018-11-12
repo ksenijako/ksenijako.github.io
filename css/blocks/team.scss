@@ -4,7 +4,7 @@
 }
 
 .team__block{
-  width: 50%;
+  width: 100%;
   height: 100%;
   position: absolute;
   left: 50%;
@@ -13,11 +13,19 @@
   flex-direction: column;
   justify-content: center;
   padding-left: 13%;
+
+  @include tablets{
+    left: 0;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .team__item{
   color: #fff; 
-  font-size: 14.01px;
+  font-size: rem(14.01px);
 }
 
 .team__member-name{
@@ -29,24 +37,33 @@
   &:before{
     display: flex;
     content: "";
-    width: 10px;
-    height: 7px;
+    width: rem(10px);
+    height: rem(7px);
     background: url('../img/icons/triangle.png') center center no-repeat;
-    margin-right: 10px;
+    margin-right: rem(10px);
+  }
+
+  @include tablets{
+    justify-content: center;
+    font-size: rem(20px);
   }
 
 }
 
 .team__member{
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
   height: 0;
   overflow: hidden;
+
+  @include tablets{
+    flex-direction: column;
+  }
 }
 
 .team__avatar{
-  width: 100px;
-  height: 100px;
+  width: rem(100px);
+  height: rem(100px);
   border-radius: 50%;
   overflow: hidden;
   margin-right: 20px;
@@ -66,12 +83,12 @@
   
   .team__text{
     @include ubuntu($style: light);
-    max-width: 208px;
+    max-width: rem(208px);
   }
 }
 
 .team__member-name_active + .team__member{
-  height: 100px;
+  height: rem(100px);
   overflow: auto;
 }
 

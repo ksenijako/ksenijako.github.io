@@ -1,12 +1,12 @@
 .btn{
-  border-radius: 5px;
-  padding: 10px 15px;
+  border-radius: rem(5px);
+  padding: rem(10px) rem(15px);
   background: $red;
   color: #fff;
   @include ubuntu($style: medium);
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: rem(13px);
 
   &:hover{
     background: #c1401e;
@@ -26,8 +26,8 @@
 .btn--bg-black{
   background: #2f3234;
   text-align: center;
-  padding: 12px 15px;
-  max-width: 110px;
+  padding: rem(12px) rem(15px);
+  max-width: rem(110px);
 
   &:hover{
     background: #1f2122;

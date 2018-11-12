@@ -1,10 +1,22 @@
+html{
+  font-style: 16px;
+
+  @include tablets{
+    font-size: 14px;
+  }
+
+  @include phones{
+    font-size: 13px;
+  }
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,29 +26,32 @@ body {
 }
 
 .container {
+  height: 100%;
   margin: 0 auto;
-  width: 940px;
+  position: relative;
+  width: 100%;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
 
   &--without-align{
     justify-content: initial;
   }
 
   &_footer{
-    flex-direction: inherit;
+    flex-direction: initial;
     justify-content: space-between;
     align-items: center;
   }
   
+  @include tablets{
+    padding: 0px 20px;
+  }
 }
 
 .wrapper {
   position: relative;
-  width: 100%;
-  min-width: 940px + 20px;
   min-height: 100%;
   overflow: hidden;
 }
@@ -105,7 +120,7 @@ footer {
   font-size: 72px;
   @include gagalin();
   color: $yellow;
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 
   &_color {
     &_black {

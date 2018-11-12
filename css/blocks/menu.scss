@@ -5,9 +5,15 @@
 
   .title{
     position: absolute;
-    top: 110px;
-    left: 110px;
+    top: rem(110px);
+    left: rem(110px);
     color: #fff;
+
+    @include phones{
+      font-size: rem(45px);
+      top: rem(50px);
+      left: rem(50px);
+    }
   }
 
   &__list{
@@ -26,7 +32,11 @@
         color: $yellow;
       }
       .menus__wrap{
-        width: 540px;
+        width: rem(540px);
+
+        @include phones{
+          width: rem(200px);
+        }
       }
     }
   }
@@ -41,25 +51,32 @@
     @extend %cover;
     display: flex;
     align-items: flex-end;
-    width: 80px;
-    padding-bottom: 45px;
+    width: rem(80px);
+    padding-bottom: rem(45px);
     text-decoration: none;
     span{
-      font-size: 40px;
+      font-size: rem(40px);
       @include gagalin();
       color: #fff;
       transform: rotate(-90deg);
       white-space: nowrap;
       width: 100%;
+      @include phones{
+        white-space: inherit;
+      }
     }
   }
 
   &__content{
     background-color: rgba(#2f3234, 0.93);
     height: 100%;
-    padding: 62px 37px 62px 33px;
-    line-height: 24px;
-    min-width: 540px;
+    padding: rem(62px) rem(37px) rem(62px) rem(33px);
+    line-height: rem(24px);
+    min-width: rem(540px);
+    @include phones{
+      min-width: rem(150px);
+      padding: rem(10px) rem(10px) rem(10px) rem(10px);
+    }
   }
 
 }

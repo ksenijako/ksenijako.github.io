@@ -24,6 +24,11 @@
 
   }
 
+  @include tablets{
+    width: 50%;
+    height: 25%;
+  }
+
 }
 
 .reviews__hover-block{
@@ -36,12 +41,15 @@
   opacity: 0;
   transform: scale(.8);
   transition: 0.3s;
-  padding: 0px 20px;
+  padding: 0 rem(20px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #fff;
-  font-size: 14px;
+  font-size: rem(14px);
+  @include phones{
+  align-items: center;
+  }
 }
 
 .reviews__title{
@@ -49,6 +57,9 @@
 }
 
 .reviews__text{
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   @include ubuntu($style: light);
+  @include phones{
+    display: none;
+  }
 }

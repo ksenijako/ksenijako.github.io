@@ -1,11 +1,15 @@
 .title{
   color: $yellow;
-  font-size: 72px;
-  margin-bottom: 20px;
+  font-size: rem(72px);
+  margin-bottom: rem(20px);
   @include gagalin();
 
   &--color-black{
     color: black;
     text-align: center;
+  }
+  
+  @include tablets{
+    font-size: rem(63px);
   }
 }

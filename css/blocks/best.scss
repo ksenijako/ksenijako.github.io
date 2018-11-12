@@ -4,6 +4,9 @@
 
 .best__list{
   display: flex;
+  @include phones{
+    flex-direction: column;
+  }
 }
 
 .best__item{
@@ -12,25 +15,38 @@
   flex-direction: column;
   align-items: center;
   width: 30%;
-  padding: 0px 10px;
+  padding: 0 rem(10px);
+
+  @include phones{
+    flex-direction: initial;
+    width: 100%;
+  }
 }
 
 .best__img{
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
+  @include phones{
+    width: 50%;
+    height: 50%;
+  }
 }
 
 .best__desc{
   text-align: center;
+  @include phones{
+    text-align: left;
+    margin-left: 5%;
+  }
 }
 
 .best__title{
   @include lifehack();
-  font-size: 24.12px;
-  margin-bottom: 20px;
+  font-size: rem(24.12px);
+  margin-bottom: rem(20px);
 }
 
 .best__text{
   @include ubuntu($style: light);
-  font-size: 14.04px;
+  font-size: rem(14.04px);
   line-height: 1.714;
 }
