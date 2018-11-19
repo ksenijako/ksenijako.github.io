@@ -27,6 +27,7 @@
   @include tablets{
     width: 50%;
     height: 25%;
+
   }
 
 }
@@ -47,8 +48,14 @@
   justify-content: center;
   color: #fff;
   font-size: rem(14px);
+
+  @include tablets{
+    align-items: center;
+    text-align: center;
+  }
+
   @include phones{
-  align-items: center;
+    align-items: center;
   }
 }
 

@@ -29,7 +29,7 @@ body {
   height: 100%;
   margin: 0 auto;
   position: relative;
-  width: 100%;
+  width: 95%;
   max-width: 940px;
   display: flex;
   flex-direction: column;
@@ -117,7 +117,7 @@ footer {
 }
 
 .section-title {
-  font-size: 72px;
+  font-size: rem(72px);
   @include gagalin();
   color: $yellow;
   margin-bottom: rem(40px);

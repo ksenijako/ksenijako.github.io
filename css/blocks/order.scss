@@ -2,8 +2,18 @@
   background: url('../img/bg/order-bg.jpg') center center / cover no-repeat;
   position: relative;
   color: #fff;
+
+  .title{
+    text-align: center;
+  }
 }
 
+.container_order{
+  @include phones{
+    width: 100%;
+    padding: 0;
+  }
+}
 
 .form{
   display: flex;
@@ -11,11 +21,12 @@
 
   @include tablets{
     padding: 0 5%;
+    flex-direction: column;
   }
 
   @include phones{
     flex-direction: column;
-    padding: 0 18%;
+    padding: 0;
   }
 }
 
@@ -27,17 +38,31 @@
     margin-right: 0;
   }
 
+  @include tablets{
+    margin-right: 0;
+  }
+
+  @include phones{
+    margin-right: 0;
+  }
 }
 
 .form__row{
   display: flex;
   margin-bottom: rem(20px);
 
+
   &:last-child{
     margin-bottom: 0;
   }
   &_phone{
     justify-content: center;
+  }
+
+  &_center{
+    @include phones{
+      justify-content: center;
+    }
   }
 }
 
@@ -72,10 +97,11 @@
   padding: rem(11px) rem(21px);
   border-radius: rem(4px);
   box-sizing: border-box;
-  border-width: rem(1px);
+  border-width: rem(2px);
   border-style: solid;
   border-color: transparent;
 }
+
 
 .form__input:focus, .form__textarea:focus{
   border-color: $yellow;
@@ -88,6 +114,7 @@
 }
 
 .form__radio{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -101,5 +128,70 @@
 .form__checkbox{
   display: flex;
   align-items: center;
+  position: relative;
 }
+
+.form__radio-button{
+  position: absolute;
+  top: 0;
+  left: rem(-9999px);
+}
+
+.form__radio-fake{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(20px);
+  height: rem(20px);
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: rem(13px);
+}
+
+.form__radio-button:checked + .form__radio-fake:before {
+  height: rem(8px);
+  width: rem(8px);
+}
+
+.form__radio-fake:before {
+  content: '';
+  display: flex;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: $red;
+  transition: .5s;
+}
+
+.form__checkbox-button{
+  position: absolute;
+  top: 0;
+  left: rem(-9999px);
+}
+
+.form__checkbox-fake{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(16px);
+  height: rem(16px);
+  background-color: #fff;
+  margin-right: rem(10px);
+}
+
+.form__checkbox-button:checked + .form__checkbox-fake:before {
+  height: rem(16px);
+  width: rem(16px);
+}
+
+.form__checkbox-fake:before {
+  content: '';
+  display: flex;
+  width: 0;
+  height: 0;
+  background: url('../img/icons/check.png') center center  no-repeat;
+  transition: .5s;
+}
+
+
 

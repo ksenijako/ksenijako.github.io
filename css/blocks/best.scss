@@ -20,14 +20,22 @@
   @include phones{
     flex-direction: initial;
     width: 100%;
+    margin-bottom: rem(80px);
   }
 }
 
 .best__img{
   margin-bottom: rem(40px);
   @include phones{
-    width: 50%;
-    height: 50%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.best__img-pic{
+  @include phones{
+    width: rem(100px);
   }
 }
 

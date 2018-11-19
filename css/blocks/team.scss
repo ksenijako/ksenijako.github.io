@@ -26,6 +26,7 @@
 .team__item{
   color: #fff; 
   font-size: rem(14.01px);
+  margin-bottom: rem(40px);
 }
 
 .team__member-name{
@@ -52,12 +53,12 @@
 
 .team__member{
   display: flex;
-  margin-bottom: rem(40px);
   height: 0;
   overflow: hidden;
 
   @include tablets{
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -67,6 +68,16 @@
   border-radius: 50%;
   overflow: hidden;
   margin-right: 20px;
+
+  @include tablets{
+    margin-right: 0;
+    margin-bottom: rem(20px);
+  }
+
+  @include phones{
+    margin-right: 0;
+    margin-bottom: rem(20px);
+  }
 
   .team__avatar-pic{
     display: block;
@@ -87,15 +98,28 @@
   }
 }
 
-.team__member-name_active + .team__member{
+.team__item_active{
+
+  .team__member{
   height: rem(100px);
   overflow: auto;
+
+  @include tablets{
+    height: rem(230px);
+  }
+
+  @include phones{
+    height: rem(230px);
+  }
+  }
 }
 
-.team__member-name_active{
+.team__item_active{
+  .team__member-name{
   color: $yellow;
+  }
 
-  &:before{
+  .team__member-name:before{
     transform: rotate(-180deg);
   }
 }

@@ -22,22 +22,36 @@
   position: absolute;
   top: 0;
   right: 0;
+  @include phones{
+    position: relative;
+  }
   }
 
 
   &__item{
     display: flex;
-    &:hover{
+    &_active{
       .menus__trigger span{
         color: $yellow;
       }
       .menus__wrap{
         width: rem(540px);
 
+        @include tablets{
+          width: rem(530px);
+        }
         @include phones{
-          width: rem(200px);
+          width: rem(400px);
         }
       }
+
+     
+    }
+  }
+
+  &__item:last-child{
+    .menus__content{
+      padding: rem(62px) rem(100px) rem(62px) rem(33px);
     }
   }
 
@@ -61,22 +75,63 @@
       transform: rotate(-90deg);
       white-space: nowrap;
       width: 100%;
-      @include phones{
-        white-space: inherit;
-      }
     }
+    @include phones{
+      width: rem(80px);
+      
+      }
   }
 
+  
   &__content{
     background-color: rgba(#2f3234, 0.93);
     height: 100%;
     padding: rem(62px) rem(37px) rem(62px) rem(33px);
     line-height: rem(24px);
     min-width: rem(540px);
+
+    @include tablets{
+      padding: rem(60px) rem(29px) rem(60px) rem(33px);
+    }
+    
     @include phones{
       min-width: rem(150px);
       padding: rem(10px) rem(10px) rem(10px) rem(10px);
     }
+
   }
 
 }
+
+.menus__content{
+  position: relative;
+  @include phones{
+  width: rem(400px);
+  padding: rem(60px) rem(40px);
+  }
+  @include phones{
+  &:before{
+    content: "";
+    width: rem(20px);
+    height: rem(20px);
+    background: url(../img/icons/cross.png) center center / contain no-repeat;
+    position: absolute;
+    top: rem(30px);
+    right: rem(30px);
+  }
+}
+}
+
+.menus__item .menus__item_active{
+  @include phones{
+  position: absolute;
+  width: rem(480px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+}
+}
+
+
+

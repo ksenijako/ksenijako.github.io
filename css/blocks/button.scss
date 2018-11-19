@@ -29,7 +29,20 @@
   padding: rem(12px) rem(15px);
   max-width: rem(110px);
 
+  @include phones{
+    display: none;
+  }
+
   &:hover{
     background: #1f2122;
+  }
+}
+
+.btn--read{
+  display:none;
+
+  @include phones{
+    display: flex;
+    font-size: rem(10.7px);
   }
 }
