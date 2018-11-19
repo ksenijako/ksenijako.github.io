@@ -48,9 +48,10 @@
 
   }
 
-  .phone-icon{
-    height: rem(15px);
-    width: rem(15px);
+ .phone-icon{
+    height: rem(11px);
+    width: rem(13px);
+    margin-right: rem(7px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,10 +93,7 @@
 
 }
 
-.vk-icon{
+.vk-icon, .fb-icon, .inst-icon, .twitter-icon{
   width: rem(22px);
   height: rem(22px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
