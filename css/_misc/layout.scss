@@ -48,6 +48,10 @@ body {
   @include tablets{
     padding: 0px 20px;
   }
+
+  @include phones{
+    padding: 0;
+  }
 }
 
 .wrapper {

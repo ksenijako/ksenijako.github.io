@@ -10,7 +10,6 @@
 
 .container_order{
   @include phones{
-    width: 100%;
     padding: 0;
   }
 }
