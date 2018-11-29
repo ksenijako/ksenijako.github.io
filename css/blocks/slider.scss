@@ -1,0 +1,184 @@
+.burgers{
+  background-image: linear-gradient(to top, $yellow 0%, 
+  #eb8c38 48%, $yellow 74%, $yellow 100%);
+  display: flex;
+}
+.slider{
+
+  display: flex;
+  align-items: center;
+
+  .title{
+    line-height: 0.889;
+    @include phones{
+      font-size: rem(50px);
+    }
+  }
+
+  &_wrap{
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__item{
+    flex: 1;
+    display: flex;
+    @include tablets{
+      flex-direction: column;
+      padding: 0 11%;
+    }
+    @include phones{
+      padding: 0;
+    }
+  }
+
+  &__control{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: rem(13px);
+    height: rem(27px);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include phones{
+      position: absolute;
+    }
+    &_prev{
+      background-image: url("../img/icons/arrow-scroll-prev.svg");
+      left: rem(-23px);
+      @include tablets{
+        left: rem(22px);
+      }
+      @include phones{
+        left: 0;
+      }
+    }
+    &_next{
+      background-image: url("../img/icons/arrow-scroll-next.svg");
+      right: rem(-23px);
+      @include tablets{
+        right: rem(22px);
+      }
+      @include phones{
+        right: 0;
+      }
+    }
+  }
+  &__right, &__left{
+    width: 50%;
+    @include tablets{
+      width: 100%;
+    }
+  }
+  &__right{
+    margin-left: rem(30px);
+    @include tablets{
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+  &__left{
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include tablets{
+      justify-content: center;
+    }
+    @include phones{
+      padding-top: rem(90px);
+      padding-bottom: rem(10px);
+    }
+  }
+
+  &__composition{
+    position: absolute;
+    display: flex;
+    left: rem(-45px);
+    top: rem(-45px);
+    background-color: $red;
+    opacity: .5;
+    height: rem(90px);
+    width: rem(90px);
+    border-radius: rem(5px);
+    @include tablets{
+      left: 0;
+    }
+    @include phones{
+      top: 0;
+    }
+    &:before{
+      content: "";
+      align-items: center;
+      height: rem(90px);
+      width: rem(90px);
+      background: url('../img/icons/composition-burgers.png') center center no-repeat;
+      z-index: 101;
+    }
+  }
+  
+  &__weight{
+    position: absolute;
+    display: flex;
+    left: rem(-45px);
+    bottom: rem(-45px);
+    height: rem(90px);
+    width: rem(90px);
+    @include tablets{
+      bottom: initial;
+      left: initial;
+      top: rem(-45px);
+      right: 0;
+    }
+    @include phones{
+      top: 0;
+    }
+    &:before{
+      content: "";
+      align-items: center;
+      height: rem(90px);
+      width: rem(90px);
+      background: url('../img/icons/kkal.png') center center no-repeat;
+    }
+  }
+
+  &__img{
+    width: 100%;
+  }
+  &__desc{
+    margin-bottom: rem(36px);
+    line-height: rem(23.97px);
+    max-width: rem(444px);
+    @include ubuntu($style: light);
+    font-size: rem(13.98px);
+    color: #fff;
+  }
+
+  &__price{
+    display: flex;
+    align-items: baseline;
+    @include tablets{
+      justify-content: center;
+    }
+    .btn{
+      margin-left: rem(30px);
+    }
+  }
+
+  &__count{
+    @include gagalin();
+    color: $red;
+    &-number{
+      font-size: rem(71.92px);
+      margin-right: rem(10px);
+      @include phones{
+        font-size: rem(50.34px);
+      }
+    }
+    &-text{
+      font-size: rem(29.96px);
+      @include phones{
+        font-size: rem(26.16px);
+      }
+    }
+  }
+}

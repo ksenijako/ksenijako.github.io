@@ -1,12 +1,23 @@
 .title{
   color: $yellow;
   font-size: rem(67.04px);
-  margin-bottom: rem(20px);
   @include gagalin();
 
   &--color-black{
     color: black;
     text-align: center;
+  }
+
+  &_color-white{
+    color: #fff;
+  }
+
+  &_mb-56{
+    margin-bottom: rem(56px);
+  }
+
+  &_mb-47{
+    margin-bottom: rem(47px);
   }
   
   @include tablets{

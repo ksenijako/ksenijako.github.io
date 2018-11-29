@@ -8,19 +8,19 @@
 .header__buttons{
   display: flex;
   align-items: center;
+  padding-right: rem(30px);
 }
 
 .header__links {
   display: flex;
   align-items: center;
+  padding-right: rem(30px);
 }
 
 .header__menu {
 	flex: 1;
 	text-align: right;
 	margin-right: rem(20px);
-
-  @include tablets() {
-    display: none;
-  }
 }
+
+
