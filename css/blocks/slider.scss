@@ -93,8 +93,8 @@
   &__composition{
     position: absolute;
     display: flex;
-    left: rem(-45px);
-    top: rem(-45px);
+    left: rem(-15px);
+    top: rem(-15px);
     background-color: $red;
     opacity: .5;
     height: rem(90px);
@@ -102,9 +102,11 @@
     border-radius: rem(5px);
     @include tablets{
       left: 0;
+      left: rem(-35px);
     }
     @include phones{
       top: 0;
+      left: rem(10px);
     }
     &:before{
       content: "";
@@ -119,18 +121,19 @@
   &__weight{
     position: absolute;
     display: flex;
-    left: rem(-45px);
-    bottom: rem(-45px);
+    left: rem(-15px);
+    bottom: rem(-15px);
     height: rem(90px);
     width: rem(90px);
     @include tablets{
       bottom: initial;
       left: initial;
-      top: rem(-45px);
-      right: 0;
+      top: rem(-15px);
+      right: rem(-25px);
     }
     @include phones{
       top: 0;
+      right: 0;
     }
     &:before{
       content: "";
