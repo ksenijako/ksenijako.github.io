@@ -15,17 +15,21 @@
     }
   }
 
-  &_wrap{
+  &__wrap{
     flex: 1;
     overflow: hidden;
   }
 
+  &__list{
+    display: flex;
+    transition: 1s;
+  }
   &__item{
     flex: 1;
     display: flex;
     @include tablets{
       flex-direction: column;
-      padding: 0 11%;
+      padding: 0;
     }
     @include phones{
       padding: 0;
@@ -34,7 +38,7 @@
 
   &__control{
     position: relative;
-    z-index: 1;
+    z-index: 101;
     display: flex;
     width: rem(13px);
     height: rem(27px);
@@ -44,7 +48,7 @@
       position: absolute;
     }
     &_prev{
-      background-image: url("../img/icons/arrow-scroll-prev.svg");
+      // background-image: url("../img/icons/arrow-scroll-prev.svg");
       left: rem(-23px);
       @include tablets{
         left: rem(22px);
@@ -54,7 +58,7 @@
       }
     }
     &_next{
-      background-image: url("../img/icons/arrow-scroll-next.svg");
+      // background-image: url("../img/icons/arrow-scroll-next.svg");
       right: rem(-23px);
       @include tablets{
         right: rem(22px);
@@ -75,7 +79,11 @@
     @include tablets{
       margin-right: 0;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
   }
   &__left{
     display: flex;
@@ -93,20 +101,20 @@
   &__composition{
     position: absolute;
     display: flex;
-    left: rem(-15px);
-    top: rem(-15px);
+    left: rem(0px);
+    top: rem(0px);
     background-color: $red;
     opacity: .5;
     height: rem(90px);
     width: rem(90px);
     border-radius: rem(5px);
     @include tablets{
-      left: 0;
-      left: rem(-35px);
+      top: rem(15px);
+      left: rem(25px);
     }
     @include phones{
       top: 0;
-      left: rem(10px);
+      left: rem(30px);
     }
     &:before{
       content: "";
@@ -121,19 +129,19 @@
   &__weight{
     position: absolute;
     display: flex;
-    left: rem(-15px);
+    left: rem(0px);
     bottom: rem(-15px);
     height: rem(90px);
     width: rem(90px);
     @include tablets{
       bottom: initial;
       left: initial;
-      top: rem(-15px);
-      right: rem(-25px);
+      top: rem(15px);
+      right: rem(15px);
     }
     @include phones{
       top: 0;
-      right: 0;
+      right: rem(30px);
     }
     &:before{
       content: "";
@@ -146,6 +154,12 @@
 
   &__img{
     width: 100%;
+    @include tablets{
+      padding: 2% 20%;
+    }
+    @include phones{
+      padding: 0 10%;
+    }
   }
   &__desc{
     margin-bottom: rem(36px);

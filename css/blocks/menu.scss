@@ -121,14 +121,13 @@
   padding: rem(60px) rem(40px);
   }
   @include phones{
-  &:before{
-    content: "";
+  .menus__cross{
     width: rem(20px);
     height: rem(20px);
     background: url(../img/icons/cross.png) center center / contain no-repeat;
     position: absolute;
     top: rem(30px);
-    right: rem(30px);
+    right: rem(10px);
   }
 }
 }

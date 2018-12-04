@@ -53,8 +53,6 @@
 
 .team__member{
   display: flex;
-  height: 0;
-  overflow: hidden;
 
   @include tablets{
     flex-direction: column;
@@ -100,7 +98,7 @@
 
 .team__item_active{
 
-  .team__member{
+  .team__wrap{
   height: rem(100px);
   overflow: auto;
 
@@ -122,4 +120,10 @@
   .team__member-name:before{
     transform: rotate(-180deg);
   }
+}
+
+.team__wrap{
+  height: 0;
+  overflow: hidden;
+  transition: .5s;
 }
