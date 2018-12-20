@@ -527,16 +527,16 @@
       <section class="section order">
       <div class="container container_order">
         <h2 class="title title_mb-56">Закажите доставку</h2>
-        <form class="form">
+        <form class="form" id="myForm">
           <div class="form__part">
             <div class="form__row">
               <label for="" class="form__block">
                 <span class="form__block-title">Имя</span>
-                <input type="text" class="form__input">
+                <input type="text" class="form__input" name="name">
               </label>
               <label for="" class="form__block form__block_active">
                 <span class="form__block-title">Телефон</span>
-                <input type="text" class="form__input" placeholder="89212264923">
+                <input name="phone" type="text" class="form__input" placeholder="89212264923">
               </label>
             </div>
             <div class="form__row">
@@ -568,7 +568,7 @@
             <div class="form__row">
               <label for="" class="form__block">
                 <span class="form__block-title">Комментарий</span>
-                <textarea name="text" class="form__textarea form__textarea_active"></textarea>
+                <textarea name="textArea" class="form__textarea form__textarea_active"></textarea>
               </label>
             </div>
             <div class="form__row form__row_center">
